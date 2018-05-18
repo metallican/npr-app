@@ -1,4 +1,5 @@
 <aura:component >
+<!--comment by user 2 -->
     <aura:attribute type="string" name="bgColor" />
     <aura:attribute type="string" name="fontColor" default="#000"/>
     <aura:attribute type="string" name="borderColor" default="#000"/>
