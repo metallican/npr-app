@@ -1,0 +1,33 @@
+/** helloWorld.css **/
+.THIS {
+    background-image: url("https://npr-app-dev-ed.my.salesforce.com/resource/1453213670000/sf1ltngbackground") ;
+    
+}
+
+h1.THIS {
+    font-size:20px;
+}
+
+.THIS h1{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.THIS .container {
+    padding-top: 20px;
+}
+
+.THIS .red {
+    background-color: red;
+    padding-left: 110px;
+}
+
+.THIS .blue {
+    background-color: blue;
+    padding: 10px;
+}
+
+.THIS .green {
+    background-color: green;
+    padding: 10px;
+}
