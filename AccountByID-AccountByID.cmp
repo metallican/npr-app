@@ -1,0 +1,27 @@
+<aura:component controller="AccountByID" >
+    
+    <!--
+	<link href='/resource/1428061418000/bootsf1css' rel="stylesheet"/>
+	<link href='/resource/1428374411000/bootsf1js'/>
+    -->
+    <ltng:require scripts="/resource/bootsf1js"
+        styles="/resource/bootsf1css"/>
+    
+    <aura:attribute name="accID" type="String" default="00128000002kT4Z"/>
+    
+    <aura:attribute name="ac" type="Account"  default="{ sobjectType: 'Account' }"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+      
+    <form>
+    <ui:inputText label="Account Name" value="{!v.ac.Name}"/>
+    <ui:inputText label="Type" value="{!v.ac.Type}"/>
+    <ui:inputText label="Industry" value="{!v.ac.Industry}"/> 
+   
+        Account Name: <force:inputField class="form-control" aura:id="a1" value="{!v.ac.Name}"/>
+        Account Type: <force:inputField class="Editpick" aura:id="a2" value="{!v.ac.Type}"/>
+        SLA Date: <force:inputField class="form-control" aura:id="a3" value="{!v.ac.SLAExpirationDate__c}"/>
+    </form>
+            
+    
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component controller="AccListByType_1_comp_ctrl" >
+   
+	<link href='/resource/1428061418000/bootsf1css' rel="stylesheet"/>
+	<link href='/resource/1428374411000/bootsf1js'/>
+    
+    <aura:attribute name="accs" type="account[]"/>
+    <aura:attribute name="acc" type="account"
+                    default="{'sobjectType': 'account',
+                             'Type': 'customer - direct'
+                             }"/>
+    
+    
+      <ui:button label="pick details" press="{!c.pickval}"/>
+    <form> 
+        <fieldset> 
+            <force:inputField aura:id="pick"  value="{!v.acc.type}"/> 
+            Acc Name: <force:inputField aura:id="name"  value="{!v.acc.Name}"/> 
+        </fieldset>
+    </form> 
+</aura:component>

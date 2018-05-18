@@ -1,0 +1,8 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="newlabel" type="String"></aura:attribute>
+    <div align="center">
+    <p aura:id="p1" id="htmlp1">This paragraph</p>
+    <ui:inputText aura:id="name" label="Button Label" value="{!v.newlabel}"/>
+	<ui:button aura:id="button1" label="apply above text to me" press="{!c.changelabel}" class="btn-primary"/> 
+    </div>
+</aura:component>
