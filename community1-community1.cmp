@@ -1,0 +1,20 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="greeting" type="String" default="Hello" />
+    <aura:attribute name="subject" type="String" default="World" />
+    <aura:attribute name="Name" type="String" default="Prabhan" />
+    <aura:attribute name='showSpinner' type='Boolean' default='true' />
+
+    <div style="box">
+        <span class="greeting">{!v.greeting}</span>, {!v.subject} <br/>
+        
+    <div style='margin-top:100px;margin-left:30px;'>
+        <ui:button class="btn primary" label="Hide/Show Spinners" press="c.toggleSpinners"  aura:id="ToggleBtn" />
+        <br/>
+        <c:Spinner type="bars" width="64" height="64" color="red" show="{!v.showSpinner}"/>
+
+        </div>
+        
+        <br/>
+        --<br/> by {!v.Name}.
+    </div>
+</aura:component>

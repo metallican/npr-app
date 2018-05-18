@@ -1,0 +1,22 @@
+<aura:component controller="Table_data">
+	
+    <aura:attribute name="records" type="List"/>
+    <aura:attribute name="recordMap" type="Map"/>
+    
+    <aura:attribute name="Column1_Field" type="String" Default="Id"/>
+    <aura:attribute name="Column1_Label" type="String"/>
+    
+    <aura:attribute name="Column2_Field" type="String" Default="Name"/>
+    <aura:attribute name="Column2_Label" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:iteration items="{!v.records}" var="record" indexVar="idx"> 
+        {!idx+1} -{!record.v.Column2_Field} 
+        <aura:iteration items="{!v.record}" var="rec" indexVar="idx" end="6"> 
+            {!record.Name} +
+            
+        </aura:iteration>
+        <br/>
+    </aura:iteration>
+</aura:component>

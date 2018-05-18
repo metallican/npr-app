@@ -1,0 +1,23 @@
+<aura:component controller="createSobj_1_comp_ctrl" implements="force:appHostable">
+   <!--
+    <link href='/resource/1428061418000/bootsf1css' rel="stylesheet"/>
+    <link href='/resource/1428374411000/bootsf1js' rel="stylesheet"/>
+  -->
+    <aura:attribute name="newSobj" type="account"
+                    default="{ 'sobjectType': 'account',
+                             'Name': ''                         
+                             }"/> 
+    <!-- Input Form using components -->
+    
+    <form> 
+        <fieldset>
+            <ui:inputText aura:id="SobjName" label="Account Name"
+                          class="form-control"
+                          value="{!v.newSobj.Name}"
+                          placeholder="Enter Account Name" required="true"/>
+           
+            <ui:button label="Submit" press="{!c.createSobj}"/>
+        </fieldset>
+    </form>
+    
+</aura:component>

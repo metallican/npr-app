@@ -1,0 +1,27 @@
+<aura:component controller="CaseList_ltng">
+    
+    <aura:attribute name="cases" type="List" description="Cases" />  
+    <aura:handler name="init" value="{!this}" action="{!c.loadCases}" />
+    
+    <aura:iteration items="{!v.cases}" var="case">
+        <h1>
+            <ui:outputText aura:id="caseNum" value="{!case.CaseNumber}"/>
+        </h1>
+        <div class="caseFieldLeft">
+            <label>Subject: </label>
+            <ui:outputText aura:id="subject" value="{!case.Subject}"/>
+        </div>
+        <div class="caseFieldRight">
+            <label>Created: </label>
+            <ui:outputDateTime aura:id="created" value="{!case.CreatedDate}"/>
+        </div>
+        <div class="caseFieldLeft">
+            <label>Priority: </label>
+            <ui:outputText aura:id="priority" value="{!case.Priority}"/>
+        </div>
+        <div class="caseFieldRight">
+            <label>Status: </label>
+            <ui:outputText aura:id="subject" value="{!case.Status}"/>
+        </div>
+    </aura:iteration>
+</aura:component>

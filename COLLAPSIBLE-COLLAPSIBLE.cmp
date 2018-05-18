@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="header" type="String"/>
+    <aura:attribute name="body" type="Aura.Component[]"/>
+    <div>
+         <div class="Message">
+             <div style="width:90%;float:left"> {!v.header} </div>
+             <div class="expandCollapse" onclick="{!c.ToggleCollapse}"> [ + ] </div>
+        </div>
+        <div class="container hide"> 
+            {!v.body}
+        </div>
+    </div>
+</aura:component>

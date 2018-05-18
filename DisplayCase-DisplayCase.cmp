@@ -1,0 +1,21 @@
+<aura:component controller="DisplayCaseController">
+    
+	<link href='/resource/1428061418000/bootsf1css' rel="stylesheet"/>
+	<link href='/resource/1428374411000/bootsf1js'/>
+    <aura:attribute name="record" type="Case"/>
+    
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    <form>
+        <fieldset>
+            <ui:inputText aura:id="csSub" label="Case Subject" class="form-control"
+                          value="{!v.record.Subject}"/>
+            <ui:inputNumber aura:id="csDesc" label="Description" class="form-control"
+                            value="{!v.record.Description}"/>
+            <ui:inputText aura:id="csStatus" label="Status" class="form-control" 
+                          value="{!v.record.Status}"/>  
+        </fieldset>
+        <br/>
+         
+    </form>
+</aura:component>

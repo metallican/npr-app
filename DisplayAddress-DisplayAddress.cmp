@@ -1,0 +1,12 @@
+<aura:component >
+	
+	<aura:attribute name="Street" type="String" default=""/>
+	<aura:attribute name="City" type="String" default=""/>
+	<aura:attribute name="State" type="String" default=""/>
+	<aura:attribute name="PostalCode" type="String" default=""/>
+    
+     {!v.Street}
+     {!v.City}
+     {!v.State}
+     {!v.PostalCode}
+</aura:component>
